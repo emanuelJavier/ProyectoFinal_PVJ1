@@ -6,22 +6,22 @@ public class Volumen : MonoBehaviour
 {
     public Slider slider;
     public float sliderValue;
-    public Image imagenMute;
+   // public Image imagenMute;
     // Start is called before the first frame update
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("volumenAudio", 0.5f);
         AudioListener.volume = sliderValue;
-        Mute();
+        //Mute();
     }
     public void ChangeSlider(float valor) 
     {
         sliderValue = valor;
         PlayerPrefs.SetFloat("volumenAudio", sliderValue);
         AudioListener.volume = slider.value;
-        Mute();
+      //  Mute();
     }
-    public void Mute() 
+   /* public void Mute() 
     {
         if (sliderValue == 0)
         {
@@ -31,6 +31,6 @@ public class Volumen : MonoBehaviour
         {
             imagenMute.enabled = false;
         }
-    }
+    }*/
 }
 
